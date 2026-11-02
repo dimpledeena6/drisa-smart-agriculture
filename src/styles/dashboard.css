@@ -1,0 +1,1134 @@
+/* =========================================
+   DRISA DASHBOARD
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.dashboard-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  padding: 0 7% 110px;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(255, 226, 120, 0.14),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f8fcf5 0%,
+      #eef7e9 50%,
+      #f9fcf7 100%
+    );
+
+  color: #234b2d;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.dashboard-header {
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1250px;
+  margin: auto;
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.dashboard-logo {
+  width: 52px;
+  height: 52px;
+
+  object-fit: cover;
+
+  border-radius: 14px;
+
+  opacity: 0.94;
+
+  filter:
+    saturate(0.92)
+    brightness(1.06)
+    drop-shadow(
+      0 6px 12px rgba(50, 110, 50, 0.10)
+    );
+}
+
+.brand-section h1 {
+  margin: 0;
+
+  color: #176133;
+
+  font-size: 20px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.brand-section p {
+  margin: 1px 0 0;
+
+  color: #829184;
+
+  font-size: 10px;
+
+  letter-spacing: 1.2px;
+}
+
+.notification-button {
+  width: 44px;
+  height: 44px;
+
+  border: 1px solid rgba(74, 130, 70, 0.12);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  font-size: 17px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 18px rgba(50, 100, 50, 0.07);
+}
+
+
+/* =========================================
+   WELCOME
+   ========================================= */
+
+.welcome-section {
+  max-width: 1250px;
+
+  margin: 28px auto 25px;
+}
+
+.welcome-small {
+  margin: 0 0 5px;
+
+  color: #719078;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+.welcome-section h2 {
+  margin: 0;
+
+  color: #174f2d;
+
+  font-size: clamp(25px, 3vw, 34px);
+
+  font-weight: 700;
+
+  letter-spacing: -0.8px;
+}
+
+.welcome-description {
+  margin: 8px 0 0;
+
+  color: #788a7b;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   WEATHER
+   ========================================= */
+
+.weather-card {
+  position: relative;
+
+  max-width: 1250px;
+
+  margin: auto;
+
+  padding: 27px;
+
+  border-radius: 25px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.92),
+      rgba(238, 248, 225, 0.82)
+    );
+
+  border:
+    1px solid rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 18px 45px rgba(64, 115, 55, 0.09);
+}
+
+.weather-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  right: -70px;
+  top: -100px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 220, 90, 0.27),
+      transparent 68%
+    );
+
+  filter: blur(12px);
+}
+
+.weather-main {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+}
+
+.weather-icon {
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff8c9,
+      #f1e69a
+    );
+
+  font-size: 35px;
+
+  box-shadow:
+    0 8px 20px rgba(190, 165, 60, 0.12);
+}
+
+.weather-location {
+  margin: 0 0 2px;
+
+  color: #78907d;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+}
+
+.weather-main h3 {
+  margin: 0;
+
+  color: #185d32;
+
+  font-size: 35px;
+
+  line-height: 1;
+
+  font-weight: 700;
+}
+
+.weather-main p:last-child {
+  margin: 4px 0 0;
+
+  color: #718373;
+
+  font-size: 12px;
+}
+
+.weather-details {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 23px;
+}
+
+.weather-details div {
+  flex: 1;
+
+  padding: 13px 15px;
+
+  border-radius: 14px;
+
+  background:
+    rgba(255, 255, 255, 0.55);
+}
+
+.weather-details span {
+  display: block;
+
+  color: #839186;
+
+  font-size: 10px;
+}
+
+.weather-details strong {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #326b3d;
+
+  font-size: 14px;
+}
+
+.weather-button {
+  position: relative;
+
+  z-index: 3;
+
+  margin-top: 18px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #348047;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  padding: 0;
+}
+
+
+/* =========================================
+   SECTIONS
+   ========================================= */
+
+.section-block {
+  max-width: 1250px;
+
+  margin: 34px auto 0;
+}
+
+.section-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+}
+
+.section-heading p {
+  margin: 0 0 3px;
+
+  color: #8b9b8d;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  color: #255b35;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+.section-heading button {
+  border: none;
+
+  background: transparent;
+
+  color: #3d8a4d;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   FARM CARD
+   ========================================= */
+
+.farm-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+
+  padding: 20px;
+
+  border-radius: 20px;
+
+  background:
+    rgba(255, 255, 255, 0.78);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 10px 30px rgba(70, 115, 60, 0.07);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.farm-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 15px 35px rgba(70, 115, 60, 0.11);
+}
+
+.farm-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #e6f4cf,
+      #cfe9a8
+    );
+
+  font-size: 28px;
+}
+
+.farm-info {
+  flex: 1;
+}
+
+.farm-info h3 {
+  margin: 0;
+
+  color: #285e35;
+
+  font-size: 15px;
+}
+
+.farm-info p {
+  margin: 4px 0 8px;
+
+  color: #849187;
+
+  font-size: 11px;
+}
+
+.crop-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #52905b;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.crop-status span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #63ae62;
+
+  box-shadow:
+    0 0 0 4px rgba(99, 174, 98, 0.10);
+}
+
+.farm-arrow {
+  color: #5c9564;
+
+  font-size: 22px;
+}
+
+
+/* =========================================
+   MONITORING
+   ========================================= */
+
+.monitor-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 15px;
+}
+
+.monitor-card {
+  padding: 19px;
+
+  border-radius: 19px;
+
+  background:
+    rgba(255, 255, 255, 0.78);
+
+  box-shadow:
+    0 9px 27px rgba(70, 115, 60, 0.06);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.9);
+}
+
+.monitor-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 13px;
+
+  border-radius: 13px;
+
+  font-size: 19px;
+}
+
+.monitor-icon.soil {
+  background: #e0f2ed;
+}
+
+.monitor-icon.temp {
+  background: #fff0d6;
+}
+
+.monitor-icon.crop {
+  background: #e4f2d5;
+}
+
+.monitor-card span {
+  display: block;
+
+  color: #829087;
+
+  font-size: 10px;
+}
+
+.monitor-card strong {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #245e34;
+
+  font-size: 21px;
+}
+
+.monitor-card small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #62a16a;
+
+  font-size: 9px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   AI CARDS
+   ========================================= */
+
+.ai-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 15px;
+}
+
+.ai-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  width: 100%;
+
+  min-height: 105px;
+
+  padding: 17px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.9);
+
+  border-radius: 19px;
+
+  background:
+    rgba(255, 255, 255, 0.78);
+
+  text-align: left;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 9px 27px rgba(70, 115, 60, 0.06);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.ai-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 32px rgba(70, 115, 60, 0.11);
+}
+
+.ai-card-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #e8f5d9,
+      #d5ebbd
+    );
+
+  font-size: 22px;
+}
+
+.ai-card div:nth-child(2) {
+  flex: 1;
+}
+
+.ai-card h3 {
+  margin: 0;
+
+  color: #285f38;
+
+  font-size: 13px;
+}
+
+.ai-card p {
+  margin: 4px 0 0;
+
+  color: #879389;
+
+  font-size: 10px;
+
+  line-height: 1.4;
+}
+
+.ai-card > span {
+  color: #5d9762;
+
+  font-size: 19px;
+}
+
+
+/* =========================================
+   BOTTOM NAVIGATION
+   ========================================= */
+
+.bottom-navigation {
+  position: fixed;
+
+  z-index: 100;
+
+  left: 50%;
+
+  bottom: 18px;
+
+  transform: translateX(-50%);
+
+  width: min(580px, calc(100% - 30px));
+
+  height: 72px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-around;
+
+  padding: 8px;
+
+  border-radius: 24px;
+
+  background:
+    rgba(255, 255, 255, 0.90);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 15px 40px rgba(50, 100, 50, 0.14);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.bottom-navigation button {
+  flex: 1;
+
+  height: 58px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 3px;
+
+  border: none;
+
+  border-radius: 17px;
+
+  background: transparent;
+
+  color: #8a998d;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.bottom-navigation button span {
+  font-size: 18px;
+}
+
+.bottom-navigation button small {
+  font-size: 9px;
+
+  font-weight: 600;
+}
+
+.bottom-navigation button.active {
+  color: #26733b;
+
+  background:
+    #e9f5e1;
+}
+
+.bottom-navigation button:hover {
+  color: #26733b;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 850px) {
+
+  .dashboard-page {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .ai-grid {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .ai-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .dashboard-page {
+    padding:
+      0
+      17px
+      105px;
+  }
+
+  .dashboard-header {
+    height: 70px;
+  }
+
+  .dashboard-logo {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 12px;
+  }
+
+  .brand-section h1 {
+    font-size: 17px;
+  }
+
+  .brand-section p {
+    font-size: 8px;
+  }
+
+  .notification-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .welcome-section {
+    margin-top: 20px;
+  }
+
+  .welcome-section h2 {
+    font-size: 24px;
+  }
+
+  .welcome-description {
+    font-size: 11px;
+  }
+
+  .weather-card {
+    padding: 20px;
+
+    border-radius: 21px;
+  }
+
+  .weather-icon {
+    width: 60px;
+    height: 60px;
+
+    font-size: 29px;
+  }
+
+  .weather-main h3 {
+    font-size: 30px;
+  }
+
+  .weather-details {
+    gap: 7px;
+  }
+
+  .weather-details div {
+    padding: 10px;
+  }
+
+  .weather-details strong {
+    font-size: 12px;
+  }
+
+  .section-block {
+    margin-top: 28px;
+  }
+
+  .section-heading h2 {
+    font-size: 18px;
+  }
+
+  .monitor-grid {
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    gap: 8px;
+  }
+
+  .monitor-card {
+    padding: 12px;
+  }
+
+  .monitor-icon {
+    width: 34px;
+    height: 34px;
+
+    font-size: 16px;
+  }
+
+  .monitor-card strong {
+    font-size: 17px;
+  }
+
+  .ai-grid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .ai-card:last-child {
+    grid-column: auto;
+  }
+
+  .bottom-navigation {
+    bottom: 12px;
+
+    height: 67px;
+
+    width: calc(100% - 24px);
+  }
+
+  .bottom-navigation button {
+    height: 55px;
+  }
+}
+
+
+/* =========================================
+   DASHBOARD LAYOUT REFINEMENTS
+   ========================================= */
+
+.dashboard-page {
+  width: 100%;
+  padding: 0 clamp(18px, 4vw, 56px) 115px;
+  overflow-x: hidden;
+}
+
+.dashboard-header,
+.welcome-section,
+.weather-card,
+.section-block {
+  width: 100%;
+  max-width: 1250px;
+}
+
+/* Give sections consistent spacing */
+.section-block {
+  margin-top: 30px;
+}
+
+.section-heading {
+  margin-bottom: 14px;
+  gap: 16px;
+}
+
+.section-heading h2 {
+  font-size: 21px;
+}
+
+/* Compact Farm Overview card */
+.farm-overview-card {
+  width: 100%;
+  max-width: 440px;
+  min-height: 94px;
+  padding: 16px 18px;
+  gap: 14px;
+  text-align: left;
+}
+
+.farm-overview-card .farm-icon {
+  width: 52px;
+  height: 52px;
+}
+
+/* Monitoring status should use the full content width */
+.monitoring-status-card {
+  width: 100%;
+  min-height: 86px;
+  padding: 18px;
+  border-radius: 18px;
+}
+
+.monitoring-status-card .farm-icon,
+.irrigation-status-card .farm-icon {
+  width: 52px;
+  height: 52px;
+}
+
+/* Consistent sensor cards */
+.monitor-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.monitor-card {
+  min-width: 0;
+  min-height: 140px;
+  padding: 18px;
+  border-radius: 17px;
+}
+
+.monitor-card span {
+  font-size: 12px;
+}
+
+.monitor-card strong {
+  font-size: 23px;
+  overflow-wrap: anywhere;
+}
+
+.monitor-card small {
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* Irrigation status */
+.irrigation-status-card {
+  width: 100%;
+  min-height: 86px;
+  margin-top: 14px;
+  padding: 17px 18px;
+  border-radius: 18px;
+}
+
+/* Improve text readability */
+.farm-info h3 {
+  font-size: 15px;
+}
+
+.farm-info p {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.crop-status {
+  font-size: 11px;
+}
+
+/* Four AI features: balanced grid */
+.ai-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.ai-card {
+  min-height: 104px;
+  padding: 18px;
+}
+
+.ai-card h3 {
+  font-size: 14px;
+}
+
+.ai-card p {
+  font-size: 12px;
+}
+
+/* Tablet and mobile */
+@media (max-width: 700px) {
+  .dashboard-page {
+    padding: 0 18px 105px;
+  }
+
+  .monitor-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .monitor-card {
+    padding: 14px;
+  }
+
+  .monitor-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+  .ai-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-card:last-child {
+    grid-column: auto;
+  }
+
+  .farm-overview-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .monitor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .monitor-card:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+
+  .weather-details {
+    flex-wrap: wrap;
+  }
+
+  .weather-details div {
+    min-width: 0;
+  }
+}

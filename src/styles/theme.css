@@ -1,0 +1,83 @@
+:root {
+  /* ================================
+     DRISA BRAND
+     ================================ */
+
+  --drisa-primary: #2f7d32;
+  --drisa-primary-dark: #1b5e20;
+  --drisa-primary-light: #eaf6ea;
+
+  --drisa-green: #4caf50;
+  --drisa-lime: #8bc34a;
+
+  --drisa-gold: #f4c542;
+
+  /* ================================
+     BACKGROUNDS
+     ================================ */
+
+  --bg-main: #f7faf7;
+  --bg-card: #ffffff;
+  --bg-soft: #eef7ef;
+  --bg-dark: #102216;
+
+  /* ================================
+     TEXT
+     ================================ */
+
+  --text-primary: #17251a;
+  --text-secondary: #5f6f63;
+  --text-muted: #89958c;
+  --text-white: #ffffff;
+
+  /* ================================
+     STATUS
+     ================================ */
+
+  --success: #249447;
+  --warning: #e6a700;
+  --danger: #d83b3b;
+  --info: #2878d8;
+
+  /* ================================
+     BORDERS
+     ================================ */
+
+  --border: #e1e9e2;
+  --border-light: #edf2ee;
+
+  /* ================================
+     SHADOWS
+     ================================ */
+
+  --shadow-sm: 0 2px 8px rgba(27, 94, 32, 0.06);
+  --shadow-md: 0 8px 24px rgba(27, 94, 32, 0.10);
+  --shadow-lg: 0 16px 40px rgba(27, 94, 32, 0.14);
+
+  /* ================================
+     BORDER RADIUS
+     ================================ */
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-xl: 30px;
+
+  /* ================================
+     SPACING
+     ================================ */
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* ================================
+     TRANSITIONS
+     ================================ */
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+}

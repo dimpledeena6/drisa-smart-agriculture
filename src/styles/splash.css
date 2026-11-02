@@ -1,0 +1,1172 @@
+/* =========================================
+   DRISA SPLASH SCREEN
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.splash-screen {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 22%,
+      rgba(255, 226, 100, 0.30) 0%,
+      rgba(255, 239, 170, 0.18) 20%,
+      rgba(242, 249, 232, 0.10) 42%,
+      transparent 65%
+    ),
+    linear-gradient(
+      180deg,
+      #fcfefa 0%,
+      #f5faef 48%,
+      #eaf5e4 100%
+    );
+}
+
+
+/* =========================================
+   SUN LIGHT
+   ========================================= */
+
+.sun-glow {
+  position: absolute;
+
+  width: 720px;
+  height: 720px;
+
+  top: -390px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 207, 55, 0.28) 0%,
+      rgba(255, 224, 105, 0.20) 20%,
+      rgba(255, 239, 166, 0.11) 42%,
+      transparent 70%
+    );
+
+  filter: blur(20px);
+
+  z-index: 1;
+}
+
+
+/* =========================================
+   SOFT LIGHT
+   ========================================= */
+
+.light {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(45px);
+  z-index: 2;
+}
+
+.light-1 {
+  width: 220px;
+  height: 220px;
+  left: -20px;
+  top: 24%;
+  background: rgba(145, 210, 105, 0.16);
+}
+
+.light-2 {
+  width: 200px;
+  height: 200px;
+  right: 0;
+  top: 30%;
+  background: rgba(255, 221, 110, 0.14);
+}
+
+.light-3 {
+  width: 300px;
+  height: 300px;
+  left: 4%;
+  bottom: 17%;
+  background: rgba(115, 195, 75, 0.12);
+}
+
+.light-4 {
+  width: 280px;
+  height: 280px;
+  right: 4%;
+  bottom: 18%;
+  background: rgba(160, 215, 100, 0.14);
+}
+
+.light-5 {
+  width: 180px;
+  height: 180px;
+  left: 50%;
+  top: 38%;
+  transform: translateX(-50%);
+  background: rgba(255, 247, 200, 0.18);
+  filter: blur(38px);
+}
+
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+.splash-content {
+  position: relative;
+  z-index: 30;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  margin-top: -55px;
+
+  animation: contentIn 1.2s ease-out;
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.logo-area {
+  position: relative;
+
+  width: 390px;
+  height: 390px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-glow {
+  position: absolute;
+
+  width: 135%;
+  height: 135%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 220, 80, 0.22) 0%,
+      rgba(255, 236, 150, 0.16) 25%,
+      rgba(191, 230, 155, 0.12) 48%,
+      transparent 72%
+    );
+
+  filter: blur(30px);
+}
+
+.logo-halo {
+  position: absolute;
+
+  width: 390px;
+  height: 390px;
+
+  border-radius: 82px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.82) 0%,
+      rgba(252, 255, 248, 0.56) 45%,
+      rgba(242, 250, 236, 0.20) 70%,
+      transparent 100%
+    );
+
+  box-shadow:
+    0 12px 45px rgba(90, 140, 65, 0.08),
+    0 0 85px rgba(255, 222, 105, 0.16);
+
+  filter: blur(3px);
+
+  z-index: 2;
+}
+
+.splash-logo {
+  position: relative;
+
+  z-index: 5;
+
+  width: 370px;
+  height: 370px;
+
+  object-fit: cover;
+
+  border-radius: 72px;
+
+  clip-path:
+    inset(
+      16px
+      16px
+      16px
+      16px
+      round 62px
+    );
+
+  opacity: 0.90;
+
+  filter:
+    saturate(0.92)
+    brightness(1.10)
+    contrast(0.94)
+    drop-shadow(
+      0 18px 35px rgba(70, 120, 55, 0.08)
+    )
+    drop-shadow(
+      0 0 48px rgba(255, 222, 100, 0.14)
+    );
+
+  animation:
+    logoFloat
+    4.5s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================================
+   BEAUTIFUL TEXT
+   ========================================= */
+
+.splash-text {
+  position: relative;
+
+  z-index: 40;
+
+  margin-top: -8px;
+
+  text-align: center;
+}
+
+
+/* Smart Farming */
+
+.splash-text h1 {
+  margin: 0;
+
+  color: #155f31;
+
+  font-family:
+    "Segoe UI",
+    "Trebuchet MS",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(42px, 4.2vw, 62px);
+
+  font-weight: 700;
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+
+  text-shadow:
+    0 3px 14px rgba(38, 104, 55, 0.08);
+}
+
+
+/* Better Decisions */
+
+.splash-text h2 {
+  margin: 4px 0 0;
+
+  color: #3c914c;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(38px, 3.9vw, 58px);
+
+  font-weight: 400;
+
+  line-height: 1.05;
+
+  letter-spacing: -1.5px;
+
+  text-shadow:
+    0 3px 12px rgba(50, 125, 60, 0.06);
+}
+
+
+/* AI Powered Smart Agriculture */
+
+.splash-text p {
+  margin: 18px 0 0;
+
+  color: #718076;
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 4.5px;
+
+  line-height: 1.5;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   LOADING DOTS
+   ========================================= */
+
+.splash-loader {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: 38px;
+
+  z-index: 40;
+}
+
+.splash-loader span {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  animation:
+    loaderPulse
+    1.4s
+    infinite
+    ease-in-out;
+}
+
+.splash-loader span:nth-child(1) {
+  background: #c5e79b;
+}
+
+.splash-loader span:nth-child(2) {
+  background: #83c76a;
+
+  animation-delay: 0.18s;
+}
+
+.splash-loader span:nth-child(3) {
+  background: #4b984f;
+
+  animation-delay: 0.36s;
+}
+
+
+/* =========================================
+   FLOATING LEAVES
+   ========================================= */
+
+.leaf {
+  position: absolute;
+
+  z-index: 12;
+
+  width: 38px;
+  height: 70px;
+
+  border-radius:
+    100%
+    0
+    100%
+    0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(190, 228, 125, 0.82),
+      rgba(75, 154, 58, 0.62)
+    );
+
+  opacity: 0.48;
+
+  filter: blur(0.8px);
+
+  animation:
+    leafFloat
+    7s
+    ease-in-out
+    infinite;
+}
+
+.leaf::after {
+  content: "";
+
+  position: absolute;
+
+  width: 2px;
+  height: 54px;
+
+  left: 18px;
+  top: 8px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 230, 0.42);
+
+  transform: rotate(-35deg);
+}
+
+.leaf-1 {
+  left: 3%;
+  top: 8%;
+
+  width: 70px;
+  height: 125px;
+
+  opacity: 0.13;
+
+  filter: blur(7px);
+
+  transform: rotate(-25deg);
+}
+
+.leaf-2 {
+  left: 7%;
+  top: 37%;
+
+  width: 52px;
+  height: 94px;
+
+  opacity: 0.32;
+
+  transform: rotate(-45deg);
+}
+
+.leaf-3 {
+  left: 14%;
+  top: 53%;
+
+  width: 34px;
+  height: 62px;
+
+  opacity: 0.36;
+}
+
+.leaf-4 {
+  left: 24%;
+  top: 28%;
+
+  width: 25px;
+  height: 48px;
+
+  opacity: 0.25;
+}
+
+.leaf-5 {
+  left: 30%;
+  bottom: 27%;
+
+  width: 44px;
+  height: 80px;
+
+  opacity: 0.20;
+
+  filter: blur(2px);
+}
+
+.leaf-6 {
+  right: 3%;
+  top: 8%;
+
+  width: 75px;
+  height: 130px;
+
+  opacity: 0.13;
+
+  filter: blur(7px);
+
+  transform: rotate(30deg);
+}
+
+.leaf-7 {
+  right: 8%;
+  top: 37%;
+
+  width: 55px;
+  height: 100px;
+
+  opacity: 0.32;
+
+  transform: rotate(45deg);
+}
+
+.leaf-8 {
+  right: 17%;
+  top: 52%;
+
+  width: 35px;
+  height: 65px;
+
+  opacity: 0.36;
+
+  transform: rotate(55deg);
+}
+
+.leaf-9 {
+  right: 26%;
+  top: 28%;
+
+  width: 25px;
+  height: 48px;
+
+  opacity: 0.25;
+}
+
+.leaf-10 {
+  right: 6%;
+  bottom: 24%;
+
+  width: 85px;
+  height: 145px;
+
+  opacity: 0.15;
+
+  filter: blur(7px);
+
+  transform: rotate(30deg);
+}
+
+
+/* =========================================
+   AGRICULTURAL LANDSCAPE
+   ========================================= */
+
+.landscape {
+  position: absolute;
+
+  left: -10%;
+  bottom: -15px;
+
+  width: 120%;
+  height: 42%;
+
+  overflow: hidden;
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+.field {
+  position: absolute;
+
+  left: -10%;
+
+  width: 120%;
+
+  border-radius: 50%;
+}
+
+.field-back {
+  height: 330px;
+
+  bottom: -265px;
+
+  background:
+    linear-gradient(
+      165deg,
+      #eef7d8 0%,
+      #d8ecb4 55%,
+      #c2df8c 100%
+    );
+
+  transform: rotate(-5deg);
+
+  filter: blur(1px);
+}
+
+.field-light {
+  height: 300px;
+
+  bottom: -245px;
+
+  background:
+    linear-gradient(
+      160deg,
+      #dceeb7 0%,
+      #b9dc7e 100%
+    );
+
+  transform: rotate(5deg);
+}
+
+.field-lime {
+  height: 275px;
+
+  bottom: -225px;
+
+  background:
+    linear-gradient(
+      155deg,
+      #c8e78a 0%,
+      #96cc55 100%
+    );
+
+  transform: rotate(-4deg);
+}
+
+.field-green {
+  height: 250px;
+
+  bottom: -210px;
+
+  background:
+    linear-gradient(
+      155deg,
+      #91c95a 0%,
+      #65a746 100%
+    );
+
+  transform: rotate(3deg);
+}
+
+.field-dark {
+  height: 255px;
+
+  bottom: -225px;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 20%,
+      #74ae4b 0%,
+      #4c923b 35%,
+      #357b36 65%,
+      #286a31 100%
+    );
+
+  transform: rotate(-3deg);
+
+  filter: blur(1px);
+}
+
+
+/* =========================================
+   FLOWING LANDSCAPE LINES
+   ========================================= */
+
+.field-sweep {
+  position: absolute;
+
+  left: -20%;
+
+  width: 140%;
+
+  border-radius: 50%;
+}
+
+.sweep-1 {
+  height: 225px;
+
+  bottom: 8px;
+
+  border-top:
+    4px solid
+    rgba(255, 255, 246, 0.76);
+
+  transform: rotate(-6deg);
+
+  filter: blur(0.7px);
+}
+
+.sweep-2 {
+  height: 185px;
+
+  bottom: -12px;
+
+  border-top:
+    7px solid
+    rgba(249, 255, 231, 0.55);
+
+  transform: rotate(4deg);
+
+  filter: blur(1px);
+}
+
+.sweep-3 {
+  height: 145px;
+
+  bottom: 8px;
+
+  border-top:
+    18px solid
+    rgba(207, 238, 148, 0.42);
+
+  transform: rotate(-3deg);
+
+  filter: blur(7px);
+}
+
+.sweep-4 {
+  height: 105px;
+
+  bottom: 48px;
+
+  border-top:
+    3px solid
+    rgba(255, 255, 245, 0.72);
+
+  transform: rotate(2deg);
+
+  filter: blur(0.5px);
+}
+
+
+/* =========================================
+   FOREGROUND VEGETATION
+   ========================================= */
+
+.foreground-blur {
+  position: absolute;
+
+  bottom: -120px;
+
+  border-radius: 50%;
+
+  filter: blur(22px);
+
+  opacity: 0.65;
+}
+
+.foreground-left {
+  left: -170px;
+
+  width: 560px;
+  height: 360px;
+
+  background:
+    radial-gradient(
+      ellipse,
+      #286f35 0%,
+      #438a38 30%,
+      #6ca846 55%,
+      #9bca65 70%,
+      transparent 76%
+    );
+
+  transform: rotate(-12deg);
+}
+
+.foreground-right {
+  right: -190px;
+
+  width: 610px;
+  height: 390px;
+
+  background:
+    radial-gradient(
+      ellipse,
+      #2b7035 0%,
+      #438b39 30%,
+      #6fac48 55%,
+      #a3cf68 70%,
+      transparent 76%
+    );
+
+  transform: rotate(12deg);
+}
+
+.foreground-leaf {
+  position: absolute;
+
+  border-radius:
+    100%
+    0
+    100%
+    0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #b4df63 0%,
+      #65a83c 45%,
+      #2c7134 100%
+    );
+
+  filter: blur(10px);
+
+  opacity: 0.58;
+}
+
+.foreground-leaf-1 {
+  left: -45px;
+  bottom: -90px;
+
+  width: 190px;
+  height: 380px;
+
+  transform: rotate(-32deg);
+}
+
+.foreground-leaf-2 {
+  right: -45px;
+  bottom: -100px;
+
+  width: 220px;
+  height: 420px;
+
+  transform: rotate(36deg);
+}
+
+.foreground-leaf-3 {
+  left: 37%;
+  bottom: -125px;
+
+  width: 120px;
+  height: 230px;
+
+  opacity: 0.18;
+
+  filter: blur(17px);
+
+  transform: rotate(-12deg);
+}
+
+
+/* =========================================
+   BOKEH
+   ========================================= */
+
+.bokeh {
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: rgba(255, 239, 145, 0.68);
+
+  filter: blur(15px);
+
+  opacity: 0.68;
+}
+
+.bokeh-1 {
+  width: 90px;
+  height: 90px;
+
+  left: 5%;
+  bottom: 80px;
+}
+
+.bokeh-2 {
+  width: 50px;
+  height: 50px;
+
+  left: 20%;
+  bottom: 130px;
+}
+
+.bokeh-3 {
+  width: 100px;
+  height: 100px;
+
+  right: 7%;
+  bottom: 70px;
+}
+
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes contentIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(25px)
+      scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+@keyframes logoFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes loaderPulse {
+  0%,
+  80%,
+  100% {
+    opacity: 0.30;
+
+    transform: scale(0.75);
+  }
+
+  40% {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+}
+
+@keyframes leafFloat {
+  0%,
+  100% {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  50% {
+    margin-top: -18px;
+    margin-left: 15px;
+  }
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .logo-area {
+    width: 310px;
+    height: 310px;
+  }
+
+  .logo-halo {
+    width: 310px;
+    height: 310px;
+  }
+
+  .logo-glow {
+    width: 390px;
+    height: 390px;
+  }
+
+  .splash-logo {
+    width: 292px;
+    height: 292px;
+
+    border-radius: 55px;
+
+    clip-path:
+      inset(
+        12px
+        12px
+        12px
+        12px
+        round 48px
+      );
+  }
+
+  .splash-text h1 {
+    font-size: 43px;
+  }
+
+  .splash-text h2 {
+    font-size: 40px;
+  }
+
+  .landscape {
+    height: 34%;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .splash-content {
+    margin-top: -35px;
+  }
+
+  .logo-area {
+    width: 245px;
+    height: 245px;
+  }
+
+  .logo-halo {
+    width: 245px;
+    height: 245px;
+
+    border-radius: 55px;
+  }
+
+  .logo-glow {
+    width: 310px;
+    height: 310px;
+  }
+
+  .splash-logo {
+    width: 230px;
+    height: 230px;
+
+    border-radius: 45px;
+
+    clip-path:
+      inset(
+        9px
+        9px
+        9px
+        9px
+        round 40px
+      );
+  }
+
+  .splash-text {
+    margin-top: 0;
+  }
+
+  .splash-text h1 {
+    font-size: 31px;
+
+    letter-spacing: -1px;
+  }
+
+  .splash-text h2 {
+    font-size: 29px;
+
+    letter-spacing: -0.8px;
+  }
+
+  .splash-text p {
+    margin-top: 15px;
+
+    font-size: 7px;
+
+    letter-spacing: 2.5px;
+  }
+
+  .splash-loader {
+    margin-top: 28px;
+  }
+
+  .splash-loader span {
+    width: 7px;
+    height: 7px;
+  }
+
+  .landscape {
+    height: 34%;
+  }
+
+  .foreground-leaf-1 {
+    width: 85px;
+    height: 170px;
+  }
+
+  .foreground-leaf-2 {
+    width: 100px;
+    height: 190px;
+  }
+
+  .foreground-left,
+  .foreground-right {
+    filter: blur(15px);
+  }
+}
+
+
+/* =========================================
+   SMALL PHONES
+   ========================================= */
+
+@media (max-width: 380px) {
+
+  .logo-area {
+    width: 220px;
+    height: 220px;
+  }
+
+  .logo-halo {
+    width: 220px;
+    height: 220px;
+  }
+
+  .logo-glow {
+    width: 275px;
+    height: 275px;
+  }
+
+  .splash-logo {
+    width: 207px;
+    height: 207px;
+  }
+
+  .splash-text h1 {
+    font-size: 28px;
+  }
+
+  .splash-text h2 {
+    font-size: 26px;
+  }
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+   ========================================= */
+
+@media (min-width: 1000px) {
+
+  .landscape {
+    height: 45%;
+  }
+
+  .foreground-left {
+    width: 560px;
+    height: 370px;
+  }
+
+  .foreground-right {
+    width: 620px;
+    height: 400px;
+  }
+
+  .foreground-leaf-1 {
+    width: 190px;
+    height: 380px;
+  }
+
+  .foreground-leaf-2 {
+    width: 220px;
+    height: 430px;
+  }
+}

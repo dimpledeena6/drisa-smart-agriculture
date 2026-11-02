@@ -1,0 +1,447 @@
+
+.disease-page {
+  min-height: 100vh;
+  padding-bottom: 100px;
+  color: #34483A;
+  background: linear-gradient(180deg, #F7F8F2, #F1F4EC);
+}
+
+.disease-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 20px;
+  background: rgba(250, 251, 247, .95);
+  border-bottom: 1px solid #E4E9DF;
+  backdrop-filter: blur(14px);
+}
+
+.disease-back {
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 14px;
+  background: #E8EEE3;
+  color: #4F7054;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.disease-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.disease-brand img {
+  width: 43px;
+  height: 43px;
+  object-fit: contain;
+}
+
+.disease-brand h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.disease-brand p {
+  margin: 4px 0 0;
+  color: #849283;
+  font-size: 10px;
+}
+
+.disease-intro,
+.disease-notice,
+.disease-form,
+.disease-result,
+.disease-guidance {
+  box-sizing: border-box;
+  width: min(100% - 32px, 700px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.disease-intro {
+  padding: 28px 2px 20px;
+}
+
+.disease-eyebrow {
+  margin: 0 0 8px;
+  color: #81977C;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.disease-intro h2 {
+  margin: 0;
+  font-size: clamp(25px, 5vw, 32px);
+  line-height: 1.2;
+}
+
+.disease-intro > p:last-child {
+  margin: 9px 0 0;
+  color: #7B8B79;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.disease-notice {
+  display: flex;
+  gap: 12px;
+  padding: 15px;
+  margin-bottom: 16px;
+  border: 1px solid #E0E7D9;
+  border-radius: 17px;
+  background: #EDF2E8;
+}
+
+.disease-notice > span {
+  font-size: 20px;
+}
+
+.disease-notice p {
+  margin: 0;
+  color: #71836D;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.disease-notice strong {
+  color: #405B43;
+}
+
+.disease-form,
+.disease-result,
+.disease-guidance {
+  padding: 21px;
+  border: 1px solid #E4E9DF;
+  border-radius: 23px;
+  background: rgba(255, 255, 250, .92);
+  box-shadow: 0 9px 25px rgba(65, 91, 66, .045);
+}
+
+.disease-form-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.disease-form-heading > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  background: #EAF0E5;
+  font-size: 23px;
+}
+
+.disease-form-heading h2,
+.disease-guidance h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.disease-form-heading p {
+  margin: 5px 0 0;
+  color: #819080;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.disease-field {
+  margin-bottom: 19px;
+}
+
+.disease-field > label {
+  display: block;
+  margin-bottom: 8px;
+  color: #4D634E;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.disease-field input:not([type="file"]),
+.disease-field select {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 45px;
+  padding: 12px;
+  border: 1px solid #DFE6D9;
+  border-radius: 12px;
+  outline-color: #789779;
+  background: #FAFBF7;
+  color: #405A43;
+  font-size: 13px;
+}
+
+.disease-field > small {
+  display: block;
+  margin-top: 8px;
+  color: #819080;
+  font-size: 10px;
+}
+
+.disease-file-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.disease-upload-area {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 190px;
+  padding: 22px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1.5px dashed #C9D7C1;
+  border-radius: 18px;
+  background: #F7F9F3;
+  color: #405A43;
+  cursor: pointer;
+  text-align: center;
+}
+
+.disease-upload-icon {
+  font-size: 36px;
+}
+
+.disease-upload-area strong {
+  font-size: 12px;
+}
+
+.disease-upload-area small {
+  color: #849283;
+  font-size: 10px;
+}
+
+.disease-upload-action {
+  padding: 9px 15px;
+  border-radius: 11px;
+  background: #E6EEE0;
+  color: #527557;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.disease-upload-area:hover {
+  background: #F0F5EA;
+}
+
+.disease-image-preview {
+  overflow: hidden;
+  border: 1px solid #DFE6D9;
+  border-radius: 17px;
+  background: #F8FAF5;
+}
+
+.disease-image-preview > img {
+  display: block;
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  background: #EDF1E8;
+}
+
+.disease-image-info {
+  display: grid;
+  gap: 7px;
+  padding: 14px;
+}
+
+.disease-image-info strong {
+  font-size: 12px;
+}
+
+.disease-image-info small {
+  overflow-wrap: anywhere;
+  color: #849283;
+  font-size: 10px;
+}
+
+.disease-image-info button {
+  justify-self: start;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #8A6257;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.disease-error {
+  color: #A34C43;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.disease-submit {
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 0;
+  border-radius: 14px;
+  background: #66866A;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.disease-submit:hover {
+  background: #527557;
+}
+
+.disease-submit span {
+  font-size: 18px;
+}
+
+.disease-result {
+  margin-top: 20px;
+  background: linear-gradient(145deg, #EAF0E5, #F9FAF4);
+}
+
+.disease-result-icon {
+  margin-bottom: 12px;
+  font-size: 30px;
+}
+
+.disease-result h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.disease-result > p:not(.disease-eyebrow) {
+  color: #71836D;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.disease-result-details {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid #DCE5D6;
+}
+
+.disease-result-details span {
+  color: #819080;
+  font-size: 10px;
+}
+
+.disease-result-details strong {
+  overflow-wrap: anywhere;
+  color: #405A43;
+  font-size: 11px;
+}
+
+.disease-guidance {
+  margin-top: 22px;
+}
+
+.disease-guidance h2 {
+  margin-bottom: 15px;
+}
+
+.disease-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 0;
+  border-top: 1px solid #E9EDE5;
+}
+
+.disease-tip > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 13px;
+  background: #EAF0E5;
+  font-size: 20px;
+}
+
+.disease-tip strong {
+  font-size: 12px;
+}
+
+.disease-tip p {
+  margin: 5px 0 0;
+  color: #7B8B79;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.disease-bottom-nav {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 70px;
+  padding: 7px 8px;
+  background: rgba(250, 251, 247, .97);
+  border-top: 1px solid #E3E9DE;
+  backdrop-filter: blur(15px);
+}
+
+.disease-bottom-nav button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 0;
+  background: transparent;
+  color: #92A090;
+  cursor: pointer;
+}
+
+.disease-bottom-nav button span {
+  font-size: 19px;
+}
+
+.disease-bottom-nav button small {
+  font-size: 9px;
+}
+
+@media (min-width: 650px) {
+  .disease-bottom-nav {
+    right: auto;
+    left: 50%;
+    width: min(600px, 90%);
+    transform: translateX(-50%);
+    bottom: 14px;
+    border: 1px solid #E3E9DE;
+    border-radius: 22px;
+  }
+}
+
+@media (max-width: 380px) {
+  .disease-form,
+  .disease-result,
+  .disease-guidance {
+    padding: 16px;
+  }
+}

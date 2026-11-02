@@ -1,0 +1,506 @@
+
+/* =========================================
+   DRISA LOGIN PAGE
+   Soft Sage & Ivory Theme
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.login-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(255, 226, 120, 0.2),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #f9fcf6 0%,
+      #edf7e9 48%,
+      #f7fbf3 100%
+    );
+}
+
+/* Decorative background leaves */
+
+.login-background-leaf {
+  position: absolute;
+  width: 32px;
+  height: 60px;
+  border-radius: 100% 0 100% 0;
+  background: linear-gradient(
+    135deg,
+    rgba(180, 225, 120, 0.55),
+    rgba(75, 150, 65, 0.35)
+  );
+  opacity: 0.4;
+  pointer-events: none;
+  animation: loginLeafFloat 6s ease-in-out infinite;
+}
+
+.leaf-one {
+  top: 17%;
+  left: 8%;
+  transform: rotate(-30deg);
+}
+
+.leaf-two {
+  top: 25%;
+  right: 9%;
+  animation-delay: 1s;
+}
+
+.leaf-three {
+  bottom: 15%;
+  left: 12%;
+  animation-delay: 2s;
+}
+
+.leaf-four {
+  right: 12%;
+  bottom: 18%;
+  animation-delay: 3s;
+}
+
+/* Login card */
+
+.login-card {
+  position: relative;
+  z-index: 1;
+  width: min(440px, 100%);
+  padding: 38px 42px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 25px 70px rgba(60, 110, 55, 0.12),
+    0 5px 25px rgba(100, 140, 70, 0.06);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  animation: loginCardIn 0.6s ease-out;
+}
+
+/* Logo */
+
+.login-logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.login-logo {
+  display: block;
+  width: 105px;
+  height: 105px;
+  object-fit: cover;
+  border: 1px solid rgba(30, 90, 45, 0.15);
+  border-radius: 25px;
+  filter: drop-shadow(
+    0 10px 22px rgba(50, 110, 50, 0.1)
+  );
+}
+
+/* Heading */
+
+.login-heading {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.login-heading h1 {
+  margin: 0;
+  color: #155f31;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+.login-heading p {
+  margin: 9px 0 0;
+  color: #6d846f;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+}
+
+/* Form */
+
+.login-card form {
+  width: 100%;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group > label {
+  display: block;
+  margin-bottom: 8px;
+  color: #365b40;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Input fields */
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 55px;
+  overflow: hidden;
+  border: 1px solid rgba(113, 157, 102, 0.22);
+  border-radius: 16px;
+  background: rgba(246, 250, 243, 0.95);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.input-wrapper:focus-within {
+  border-color: rgba(64, 139, 73, 0.55);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(89, 169, 82, 0.08);
+}
+
+.input-icon {
+  flex: 0 0 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 17px;
+  opacity: 0.75;
+}
+
+.input-wrapper input {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 0;
+  height: 100%;
+  padding: 0 10px 0 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #234b2e;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+}
+
+.input-wrapper input::placeholder {
+  color: #9baa9b;
+  opacity: 1;
+}
+
+/* Password visibility button
+   Fixed-size flex item: centered in the input row. */
+
+.input-wrapper .password-toggle {
+  position: static;
+  flex: 0 0 48px;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: auto;
+  min-width: 48px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background: transparent;
+  color: #6b9170;
+  cursor: pointer;
+  line-height: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.input-wrapper .password-toggle svg {
+  display: block;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.input-wrapper .password-toggle:hover {
+  color: #28713a;
+  background: rgba(89, 169, 82, 0.06);
+}
+
+.input-wrapper .password-toggle:focus-visible {
+  outline: 2px solid #398548;
+  outline-offset: -4px;
+}
+
+.input-wrapper .password-toggle:active {
+  background: rgba(89, 169, 82, 0.1);
+}
+
+/* Error message */
+
+.login-error {
+  margin: -8px 0 16px;
+  color: #b42318;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Remember me and forgot password */
+
+.login-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 5px 2px 24px;
+  font-size: 12px;
+}
+
+.remember-option {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #718072;
+  cursor: pointer;
+}
+
+.remember-option input {
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  accent-color: #398548;
+  cursor: pointer;
+}
+
+.forgot-password {
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #368247;
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.forgot-password:hover {
+  color: #155f31;
+  text-decoration: underline;
+}
+
+/* Login button */
+
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  min-height: 54px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 17px;
+  background: linear-gradient(135deg, #26783c, #4e9c50);
+  color: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  box-shadow: 0 12px 25px rgba(47, 125, 61, 0.22);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(47, 125, 61, 0.28);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+.login-arrow {
+  display: inline-block;
+  font-size: 19px;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.login-button:hover .login-arrow {
+  transform: translateX(4px);
+}
+
+/* Registration link */
+
+.register-prompt {
+  margin-top: 20px;
+  text-align: center;
+  color: #718a73;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  line-height: 1.7;
+}
+
+.register-prompt a {
+  color: #26783c;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-prompt a:hover {
+  color: #155f31;
+  text-decoration: underline;
+}
+
+/* Footer */
+
+.login-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 28px;
+  text-align: center;
+}
+
+.login-footer p {
+  margin: 0;
+  color: #9aa99b;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+/* Animations */
+
+@keyframes loginCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes loginLeafFloat {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -10px;
+  }
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+  .login-page {
+    padding: 20px 14px;
+  }
+
+  .login-card {
+    padding: 30px 24px 25px;
+    border-radius: 27px;
+  }
+
+  .login-logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 22px;
+  }
+
+  .login-heading {
+    margin-bottom: 25px;
+  }
+
+  .login-heading h1 {
+    font-size: 25px;
+  }
+
+  .login-heading p {
+    font-size: 10px;
+    letter-spacing: 0.8px;
+  }
+
+  .input-wrapper {
+    height: 53px;
+  }
+
+  .input-icon {
+    flex-basis: 40px;
+  }
+
+  .input-wrapper .password-toggle {
+    flex-basis: 46px;
+    width: 46px;
+    min-width: 46px;
+  }
+
+  .login-button {
+    min-height: 53px;
+  }
+
+  .login-footer p {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+
+  .leaf-one {
+    left: 2%;
+  }
+
+  .leaf-two {
+    right: 2%;
+  }
+
+  .leaf-three,
+  .leaf-four {
+    opacity: 0.2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .login-card,
+  .login-background-leaf {
+    animation: none;
+  }
+
+  .login-button,
+  .login-arrow,
+  .input-wrapper {
+    transition: none;
+  }
+}
