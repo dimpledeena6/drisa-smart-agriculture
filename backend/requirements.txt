@@ -1,0 +1,12 @@
+@"
+fastapi
+uvicorn
+pandas
+numpy
+scikit-learn
+joblib
+pillow
+python-multipart
+requests
+tensorflow
+"@ | Set-Content -Encoding utf8 .\backend\requirements.txt
